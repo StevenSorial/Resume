@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+            
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Steven Magdy}{ \urlstyle{same}
+Al-Rehab City, Cairo | 01005265241 | \href{mailto:stevenmagdy92@gmail.com}{stevenmagdy92@gmail.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{B.S. in Computer Science}
+\descript{Future University in Egypt}
+\location{2016}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Languages \& frameworks}
+\location{Intermediate:}
+Java/Android \textbullet{}   Swift/iOS \\
+\location{Basic:}
+Kotlin \textbullet{} Git \textbullet{} SQL \textbullet{} Python \textbullet{} C++ \\
+\sectionsep
+
+\subsection{Libraries}
+\location{Java/Android:}
+Retrofit \textbullet{} OkHttp \textbullet{} Gson \textbullet{} Moshi  \textbullet{} 
+Dagger \textbullet{} Glide \textbullet{} RxJava \\
+\location{Swift/iOS:}
+Alamofire \textbullet{} SDWebImage
+\sectionsep
+
+\subsection{personal}
+Teamwork \\
+Presentation \\
+Hard Worker \\
+Quick Learner \\
+Communication \\
+Works well under pressure \\
+Eager to Learn New Technologies
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\href{http://github.com/stevenmagdy}{GitHub.com/\bf StevenMagdy} \\
+ \href{http://www.linkedin.com/in/StevenMagdy}{LinkedIn.com/in/\bf StevenMagdy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Interface dmcc}
+\descript{Android \& iOS Developer}
+\location{Jan 2018 - Present | Cairo, Egypt}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked on transitioning projects to use version control system(Git) \& streamline the collaboration process.
+\item Worked on maintaining and modernizing 5 Android apps.
+\item Worked on rewriting an Android app from scratch.
+\item Worked as the project owner for a new project and the sole developer for its iOS app.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PERSONAL PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Personal projects}
+\runsubsection{Muzeillect}
+\descript{\href{http://play.google.com/store/apps/details?id=com.steven.muzeillect}{Google Play} | \href{http://github.com/StevenMagdy/Muzeillect}{Source Code}}
+An extension for \textbf{\href{http://muzei.co}{Muzei}} that displays wallpapers from \textbf{\href{http://Archillect.com}{Archillect.com.}}
+\begin{tightemize}
+\item \textbf{\href{http://api.muzei.co}{Muzei API.}}
+\item 100\% \textbf{\href{http://kotlinlang.org}{Kotlin.}}
+\item \textbf{\href{http://github.com/JakeWharton/timber}{Timber}} for logging.
+\item \textbf{\href{http://jsoup.org}{jsoup}} for HTML parsing.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Wake Alarm}
+\descript{(WIP) \href{http://play.google.com/store/apps/details?id=com.steven.wakealarm}{Google Play} | \href{http://github.com/StevenMagdy/WakeAlarm}{Source Code}}
+An alarm clock with a minimal UI that uses barcode and NFC to dismiss.
+\begin{tightemize}
+\item 100\% \textbf{\href{http://kotlinlang.org}{Kotlin.}}
+\item \textbf{\href{http://github.com/zxing/zxing}{ZXing}} for barcode scanning.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{LaunchApp}
+\descript{\href{http://github.com/StevenMagdy/LaunchApp/releases/download/v1.0/LaunchApp.apk}{APK} | \href{http://github.com/StevenMagdy/LaunchApp}{Source Code}}
+An App for showing upcoming rocket launches.
+\begin{tightemize}
+\item MVP Architecture
+\item  \textbf{\href{http://http://launchlibrary.net/}{Launch Library API}}
+\item \textbf{\href{http://github.com/google/gson}{Gson}} for JSON parsing.
+\item \textbf{\href{http://jakewharton.github.io/butterknife/}{ButterKnife}} for UI binding.
+\item \textbf{\href{http://square.github.io/okhttp}{OkHttp}} \& \textbf{\href{http://square.github.io/retrofit}{Retrofit 2}} for networking.
+\item \textbf{\href{http://github.com/bumptech/glide}{Glide}} for image loading \& cashing.
+\item \textbf{\href{http://github.com/google/dagger}{Dagger 2}} for dependency injection.
+\item \textbf{\href{http://github.com/square/leakcanary}{LeakCanary}} for memory leaks detection.
+\item \textbf{\href{http://github.com/ReactiveX/RxJava}{RxJava}} for asynchronous \& reactive programming.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{FlashApp}
+\descript{\href{http://github.com/StevenMagdy/FlashApp/releases/download/v1.0/FlashApp.apk}{APK} | \href{http://github.com/StevenMagdy/FlashApp}{Source Code}}
+A simple flashlight app with a widget.
+\sectionsep
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
