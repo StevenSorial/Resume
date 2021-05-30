@@ -28,6 +28,8 @@
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
 
+\newcommand{\hyper}[2]{\href{#1}{{\underline{#2}}}}
+
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Color=primary]{Helvetica Light}
