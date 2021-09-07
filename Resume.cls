@@ -27,8 +27,9 @@
 \definecolor{primary}{HTML}{2b2b2b} 
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{linkColor}{HTML}{0d0099}
 
-\newcommand{\hyper}[2]{\href{#1}{{\underline{#2}}}}
+\newcommand{\hyper}[2]{\href{#1}{\addfontfeature{Colour=linkColor}\underline{#2}}}
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
