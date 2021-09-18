@@ -28,3 +28,12 @@ Desktop.ini
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+
+
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Word Auto Backup File
+Backup of *.doc*
